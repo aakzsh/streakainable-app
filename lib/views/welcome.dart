@@ -25,7 +25,7 @@ class Welcome extends StatelessWidget {
             children: [
               Image.asset(
                 AssetPaths.logo,
-                width: 200,
+                width: 150,
               ),
               SizedBox(
                 height: 10,

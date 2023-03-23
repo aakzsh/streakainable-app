@@ -21,7 +21,7 @@ class Loading extends StatelessWidget {
             children: [
               Image.asset(
                 AssetPaths.sdg,
-                scale: 4,
+                height: 150,
               ),
               const SizedBox(
                 height: 10,

@@ -3,6 +3,7 @@ import 'package:streakainable/constants/utils/colors.dart';
 import 'package:streakainable/constants/utils/helper.dart';
 
 import 'package:streakainable/constants/utils/styles.dart';
+import 'package:streakainable/views/home.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -22,7 +23,7 @@ class Login extends StatelessWidget {
             style: TextStyles.titleStyle,
           )),
           Text(
-            "lets get your started",
+            "lets get you started",
             style: TextStyles.subtitleStyle,
           ),
           Expanded(child: SizedBox()),
@@ -32,7 +33,10 @@ class Login extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: MaterialButton(
                 height: 70,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: ((context) => Home())));
+                },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
                 color: AppColors.secondaryBackground,
