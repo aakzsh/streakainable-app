@@ -21,7 +21,7 @@ class App extends StatelessWidget {
           textTheme: GoogleFonts.jostTextTheme()),
       darkTheme: ThemeData.light(),
       themeMode: ThemeMode.light,
-      home: Loading(),
+      home: const Loading(),
     );
   }
 }

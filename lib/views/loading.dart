@@ -11,8 +11,8 @@ class Loading extends StatelessWidget {
     return Scaffold(
       body: GestureDetector(
         onTap: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: ((context) => Welcome())));
+          Navigator.push(context,
+              MaterialPageRoute(builder: ((context) => const Welcome())));
         },
         child: Center(
           child: Column(

@@ -1,4 +1,6 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:streakainable/constants/utils/helper.dart';
 import 'package:streakainable/constants/utils/styles.dart';
 import 'package:streakainable/views/stats.dart';
 import 'package:streakainable/constants/utils/colors.dart';
@@ -13,29 +15,31 @@ class Home extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 48,
               ),
-              Text(
-                "home",
+              const Text(
+                Helper.home,
                 style: TextStyles.titleStyle,
               ),
               IconButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: ((context) => Stats())));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const Stats())));
                   },
-                  icon: Icon(Icons.bar_chart))
+                  icon: const Icon(Icons.bar_chart))
             ],
           ),
-          Text(
-            "your experiment place",
+          const Text(
+            Helper.homeSubtitle,
             style: TextStyles.subtitleStyle,
           ),
           Expanded(
@@ -45,20 +49,20 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Text(
-                        "Scratch and get a new task",
+                        Helper.scratchAndGetNew,
                         style: TextStyles.homeHeader,
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   Scratcher(
                     brushSize: 30,
                     threshold: 50,
                     color: Colors.red,
-                    onChange: (value) => print("Scratch progress: $value%"),
-                    onThreshold: () => print("Threshold reached, you won!"),
+                    onChange: (value) => log("Scratch progress: $value%"),
+                    onThreshold: () => log("Threshold reached, you won!"),
                     child: Container(
                       height: 300,
                       width: 300,
@@ -66,9 +70,9 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
-                        "Current ongoing tasks",
+                        Helper.ongoingTasks,
                         style: TextStyles.homeHeader,
                       ),
                     ],

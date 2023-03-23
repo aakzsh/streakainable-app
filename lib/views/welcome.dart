@@ -15,7 +15,7 @@ class Welcome extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
-            children: [
+            children: const [
               SizedBox(
                 height: 20,
               ),
@@ -27,18 +27,18 @@ class Welcome extends StatelessWidget {
                 AssetPaths.logo,
                 width: 150,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 Helper.appTitle,
                 style: TextStyles.titleStyle,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
-                "gamify sustainability.\none task at a time",
+              const Text(
+                Helper.appSubtitle,
                 style: TextStyles.subtitleStyle,
                 textAlign: TextAlign.center,
               ),
@@ -47,12 +47,12 @@ class Welcome extends StatelessWidget {
           GestureDetector(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => Login())));
+                    MaterialPageRoute(builder: ((context) => const Login())));
               },
               child: Column(
                 children: [
                   Text(
-                    "get started",
+                    Helper.getStarted,
                     style: TextStyles.subHeading
                         .copyWith(color: AppColors.googleGreen),
                   ),

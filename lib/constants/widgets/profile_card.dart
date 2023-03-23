@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:streakainable/constants/utils/colors.dart';
 import 'package:streakainable/constants/utils/styles.dart';
 
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key, required this.index});
-  final index;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +33,7 @@ class ProfileCard extends StatelessWidget {
       }
     ];
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Container(
         width: double.maxFinite,
         height: 80,
@@ -44,17 +42,17 @@ class ProfileCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 180,
               child: Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 20),
                 child: Text(
                   content[index]["title"]!,
                   style: TextStyles.cardTitle,
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Text(

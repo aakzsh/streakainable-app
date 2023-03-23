@@ -12,29 +12,31 @@ class Stats extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 48,
               ),
-              Text(
-                "profile stats",
+              const Text(
+                Helper.stats,
                 style: TextStyles.titleStyle,
               ),
               IconButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: ((context) => Home())));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const Home())));
                   },
-                  icon: Icon(Icons.home_outlined))
+                  icon: const Icon(Icons.home_outlined))
             ],
           ),
-          Text(
-            "your facts and figures",
+          const Text(
+            Helper.statsSubtitle,
             style: TextStyles.subtitleStyle,
           ),
           Expanded(
@@ -43,35 +45,35 @@ class Stats extends StatelessWidget {
               // mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
-                      "🔥",
+                      Helper.fire,
                       style: TextStyles.streak,
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      "7 days",
+                      "7 ${Helper.days}",
                       style: TextStyles.semiHeader,
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundImage: AssetImage(AssetPaths.pfp),
                   radius: 60,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       "@frooti",
                       style: TextStyles.username,
@@ -84,9 +86,9 @@ class Stats extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
-                      "share profile",
+                      Helper.shareProfile,
                       style: TextStyles.contentFaded,
                     ),
                     SizedBox(
@@ -98,13 +100,13 @@ class Stats extends StatelessWidget {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                ProfileCard(index: 0),
-                ProfileCard(index: 1),
-                ProfileCard(index: 2),
-                ProfileCard(index: 3),
+                const ProfileCard(index: 0),
+                const ProfileCard(index: 1),
+                const ProfileCard(index: 2),
+                const ProfileCard(index: 3),
               ],
             ),
           )),

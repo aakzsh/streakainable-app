@@ -14,19 +14,19 @@ class Login extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 60,
           ),
-          Center(
+          const Center(
               child: Text(
-            "login",
+            Helper.login,
             style: TextStyles.titleStyle,
           )),
-          Text(
-            "lets get you started",
+          const Text(
+            Helper.loginSubtitle,
             style: TextStyles.subtitleStyle,
           ),
-          Expanded(child: SizedBox()),
+          const Expanded(child: SizedBox()),
           Expanded(
               child: Center(
             child: Padding(
@@ -35,7 +35,7 @@ class Login extends StatelessWidget {
                 height: 70,
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => Home())));
+                      MaterialPageRoute(builder: ((context) => const Home())));
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
@@ -47,8 +47,8 @@ class Login extends StatelessWidget {
                       AssetPaths.google,
                       scale: 4,
                     ),
-                    Text(
-                      "Login with Google",
+                    const Text(
+                      Helper.loginWithGoogle,
                       style: TextStyles.subHeading,
                     )
                   ],
