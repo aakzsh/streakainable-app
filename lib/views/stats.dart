@@ -75,7 +75,7 @@ class Stats extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Text(
-                      "@frooti",
+                      "@aakash",
                       style: TextStyles.username,
                     ),
                     SizedBox(

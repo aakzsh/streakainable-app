@@ -69,7 +69,10 @@ class Home extends StatelessWidget {
                       color: Colors.blue,
                       child: Center(
                         child: Text(
-                            "Go to your work/school today using public transport"),
+                            "Go to your work/school today using public transport",
+                            style: TextStyles.subtitleStyle
+                                .copyWith(color: Colors.white),
+                            textAlign: TextAlign.center),
                       ),
                     ),
                   ),

@@ -63,10 +63,10 @@ class Login extends StatelessWidget {
               child: MaterialButton(
                 height: 70,
                 onPressed: () async {
-                  // await signup(context);
+                  await signup(context);
 
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => const Home())));
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: ((context) => const Home())));
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
