@@ -58,15 +58,19 @@ class Home extends StatelessWidget {
                   ),
                   const SizedBox(height: 30),
                   Scratcher(
-                    brushSize: 30,
-                    threshold: 50,
-                    color: Colors.red,
+                    brushSize: 40,
+                    threshold: 30,
+                    color: AppColors.googleGreen,
                     onChange: (value) => log("Scratch progress: $value%"),
                     onThreshold: () => log("Threshold reached, you won!"),
                     child: Container(
                       height: 300,
                       width: 300,
                       color: Colors.blue,
+                      child: Center(
+                        child: Text(
+                            "Go to your work/school today using public transport"),
+                      ),
                     ),
                   ),
                   Row(
@@ -78,24 +82,28 @@ class Home extends StatelessWidget {
                     ],
                   ),
                   Container(
-                    height: 300,
-                    width: double.maxFinite,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.primaryText),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: ListView.builder(
-                        itemCount: 5,
-                        itemBuilder: (BuildContext context, int index) {
-                          return ListTile(
-                              leading: const Icon(Icons.list),
-                              trailing: const Text(
-                                "GFG",
-                                style: TextStyle(
-                                    color: Colors.green, fontSize: 15),
-                              ),
-                              title: Text("List item $index"));
-                        }),
-                  ),
+                      height: 300,
+                      width: double.maxFinite,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: AppColors.primaryText),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Turn off all the unnecessary lights for tha day!",
+                                    style: TextStyles.subtitleStyle,
+                                  ),
+                                  Checkbox(value: false, onChanged: (val) {})
+                                ]),
+                          )
+                        ],
+                      )),
                 ],
               ),
             ),
